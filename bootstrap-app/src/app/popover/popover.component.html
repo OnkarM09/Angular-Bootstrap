@@ -1,0 +1,14 @@
+<button
+	type="button"
+	class="btn btn-outline-secondary me-2"
+	placement="top"
+	[ngbPopover]="popContent"
+	popoverTitle="Main title"
+  triggers="mouseenter:mouseleave"
+>
+	Popover on top
+</button>
+
+<ng-template #popContent>
+  <h2>This is some html</h2>
+</ng-template>

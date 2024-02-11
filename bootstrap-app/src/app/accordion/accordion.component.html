@@ -1,0 +1,29 @@
+<div ngbAccordion #accordion="ngbAccordion" class="mt-5" [animation]="true" [closeOthers]="true">
+  <div ngbAccordionItem="first" [collapsed]="true" (shown)="onShownAccordion()">
+    <h2 ngbAccordionHeader>
+      <button ngbAccordionButton>Simple</button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          This some content for accordion body
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <div ngbAccordionItem="second" class="mt-2">
+    <h2 ngbAccordionHeader>
+      <button ngbAccordionButton>Simple</button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          This is the content for the second item
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-primary mt-2" (click)="accordion.expandAll()">Toggle</button>
+<button class="btn btn-primary mt-2" (click)="accordion.collapseAll()">Toggle</button>
